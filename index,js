@@ -1,0 +1,8 @@
+//DOM content load
+    //Function calls
+
+//a function to fetch the data from the quotes API...fetchQuotes()
+//a function to display random quote and aurthor on screen load...firstQuote()
+//figureout the functionality of the like button hen clicked and record the number of likes
+//link the share button to an external socialmedia platform
+//write a function to copy contents to the users clipboard
