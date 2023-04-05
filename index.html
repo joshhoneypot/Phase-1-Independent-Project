@@ -17,10 +17,9 @@
         <!--A container to house the various buttons in use. Like button, Share button, A copy button, Navigation button, Bookmark button-->
         <div class="buttons">
             <button><img src="icons/like.png">Like</button>
-            <button><img src="icons/share.png"> Share</button>
-            <button><img src="icons/copy.png">Copy</button>
+            <button id="copy-text" onclick="copyText(quote, author)"><img src="icons/copy.png">Copy</button>
             <button><img src="icons/bookmark.png">Bookmark</button>
-            <button><img src="icons/next.png">Next</button> 
+            <button onclick="fetchQuotes()"><img src="icons/next.png">Next</button> 
         </div>
     </div>
     
