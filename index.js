@@ -1,14 +1,22 @@
 //DOM content load
 
+document.addEventListener("DOMContentLoaded", () => {
+
+    fetchQuotes();
+
+});
+
 const url = "https://api.quotable.io/random"
+
 
 //a function to fetch the data from the quotes API...fetchQuotes()
 
 function fetchQuotes(){
     fetch(url)
     .then(res => res.json())
-    .then(quote => {
-        console.log(quote);
+    .then(quotes => {
+        document.getElementById("quote").innerHTML = quotes.content;
+        document.getElementById("author").innerHTML = quotes.author
     })
 }
 
