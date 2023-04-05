@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Alkatra', cursive;
+}
+
+body{
+    background-color: rgb(0, 0, 0);
+}
+
+.quote-display-box{
+    background-color: rgb(255, 255, 255);
+    width: 750px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 20px 0px rgba(red, green, blue, alpha);
+}
+
+.quote-display-box h2{
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+
+.quote-display-box blockquote{
+    font-size: 26px ;
+    min-height: 110px;
+}
+
+
+.quote-display-box blockquote::before{
+    content: '"' ;
+}
+
+.quote-display-box blockquote::after{
+    content: '"' ;
+}
+
+.quote-display-box span{
+    display: block;
+    margin-top: 10px;
+   
+}
+
+
