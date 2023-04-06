@@ -55,6 +55,7 @@ document.querySelector("#copy-text").onclick =
 function()
 {
     copyText(document.querySelector("#quote"));
+    alert("Quote copied to clipboard")
 }
 
 
