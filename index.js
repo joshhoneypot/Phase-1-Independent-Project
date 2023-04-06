@@ -6,12 +6,12 @@ document.addEventListener("DOMContentLoaded", () => {
     //the function below calls the copyText() function on click of the button
     document.querySelector("#copy-text").onclick = () =>{
     copyText(document.querySelector("#quote"));
-    alert("Quote copied to clipboard")
+    alert("Quote copied to clipboard");
 }
 });
 
 //initializing variables
-const url = "https://api.quotable.io/random"
+const url = "https://api.quotable.io/random";
 const likeButton = document.querySelector(".like-button");
 const likeIcon = document.querySelector("#thumb-icon");
 const count = document.querySelector("#count");
@@ -27,8 +27,8 @@ let clicked=false;
     else {
         clicked = false; 
         count.textContent--;
-    }
-})
+    };
+});
 
 //the following functions sends a fetch request to the remote api and converts the response to a .json file
 function fetchQuotes(){
@@ -47,7 +47,7 @@ function fetchQuotes(){
 function copyText(htmlElement){
     if (!htmlElement){
         return;
-    }
+    };
 
     //initialises the variable of the text to be copied and also its content
     let elementText = htmlElement.innerText;
@@ -60,13 +60,13 @@ function copyText(htmlElement){
     document.body.appendChild(inputElement);
 
     //highlights the text in the inputelent
-    inputElement.select()
+    inputElement.select();
 
     //the following line copies the highlighted text to the clipboard
     document.execCommand('copy');
 
     //deletes the created element
-    document.body.removeChild(inputElement)
+    document.body.removeChild(inputElement);
 }
 
 
