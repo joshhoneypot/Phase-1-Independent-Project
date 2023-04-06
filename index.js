@@ -1,19 +1,16 @@
 //DOM content load
 
 document.addEventListener("DOMContentLoaded", () => {
-
+   
     fetchQuotes();
-    
-
 });
 
 const url = "https://api.quotable.io/random"
 
 
-
-
 //a function to fetch the data from the quotes API...fetchQuotes()
 function fetchQuotes(){
+
     fetch(url)
     .then(res => res.json())
     .then(quotes => {
@@ -21,9 +18,30 @@ function fetchQuotes(){
         const author = document.getElementById("author").innerHTML = quotes.author
         quote;
         author;
+        
     })
 }
 
+document.getElementById("download").addEventListener("click", () =>{
+    const element = docuument.body;
+    html2canvas(element).then(function(canvas){
+        const dataURL = canvas.todataURL("image/png");
+        const img = document.createElement("img");
+        img.src = dataURL
+        document.body.appendChild(img);
+
+        const link = document.createElement("a")
+        link.href = dataURL;
+        link.download = "screenshot.png";
+        link.click();
+
+        img.remove
+
+    })
+
+
+
+})
 function copyText(htmlElement){
     if (!htmlElement){
         return;

@@ -16,9 +16,13 @@
 
         <!--A container to house the various buttons in use. Like button, Share button, A copy button, Navigation button, Bookmark button-->
         <div class="buttons">
-            <button><img src="icons/like.png">Like</button>
+            <button class="like-button">
+              <span id="thumb-icon"><img src="icons/like.png"></span> 
+              <span id="count">0 Likes</span> 
+                
+            </button>
             <button id="copy-text" onclick="copyText(quote, author)"><img src="icons/copy.png">Copy</button>
-            <button><img src="icons/bookmark.png">Bookmark</button>
+            <button id="download"><img src="icons/bookmark.png">Bookmark</button>
             <button onclick="fetchQuotes()"><img src="icons/next.png">Next</button> 
         </div>
     </div>
