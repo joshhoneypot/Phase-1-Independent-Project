@@ -43,25 +43,21 @@ function copyText(htmlElement){
     if (!htmlElement){
         return;
     }
-
     let elementText = htmlElement.innerText;
     let inputElement = document.createElement('input');
     inputElement.setAttribute('value', elementText);
     document.body.appendChild(inputElement);
-
-    inputElement.select();
-    inputElement.parentNode.removeChild();
-
+    inputElement.select()
     document.execCommand('copy');
-    
-
+    document.body.removeChild(inputElement)
+}
 document.querySelector("#copy-text").onclick = 
 function()
 {
     copyText(document.querySelector("#quote"));
+}
 
-}
-}
+
 
 
  
