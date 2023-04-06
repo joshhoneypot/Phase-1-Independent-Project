@@ -6,6 +6,23 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const url = "https://api.quotable.io/random"
+const likeButton = document.querySelector(".like-button");
+const likeIcon = document.querySelector("#thumb-icon");
+const count = document.querySelector("#count");
+
+let clicked=false;
+
+    likeButton.addEventListener("click", ()=>{
+    if(!clicked){
+        clicked = true;
+        count.textContent++;
+    }
+    else {
+        clicked = false; 
+        count.textContent--;
+    }
+
+})
 
 
 //a function to fetch the data from the quotes API...fetchQuotes()
@@ -22,26 +39,6 @@ function fetchQuotes(){
     })
 }
 
-document.getElementById("download").addEventListener("click", () =>{
-    const element = docuument.body;
-    html2canvas(element).then(function(canvas){
-        const dataURL = canvas.todataURL("image/png");
-        const img = document.createElement("img");
-        img.src = dataURL
-        document.body.appendChild(img);
-
-        const link = document.createElement("a")
-        link.href = dataURL;
-        link.download = "screenshot.png";
-        link.click();
-
-        img.remove
-
-    })
-
-
-
-})
 function copyText(htmlElement){
     if (!htmlElement){
         return;
@@ -56,25 +53,16 @@ function copyText(htmlElement){
     inputElement.parentNode.removeChild();
 
     document.execCommand('copy');
-     
+    
 
-
-
-
-}
 document.querySelector("#copy-text").onclick = 
 function()
 {
     copyText(document.querySelector("#quote"));
 
 }
+}
 
 
  
-
-
-//a function to display random quote and aurthor on screen load...firstQuote()
-//figureout the functionality of the like button hen clicked and record the number of likes
-//link the share button to an external socialmedia platform
-//write a function to copy contents to the users clipboard
 
