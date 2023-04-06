@@ -1,7 +1,13 @@
 //DOM content load
-
 document.addEventListener("DOMContentLoaded", () => {
+    //GET function call
     fetchQuotes();
+
+    //the function below calls the copyText() function on click of the button
+    document.querySelector("#copy-text").onclick = () =>{
+    copyText(document.querySelector("#quote"));
+    alert("Quote copied to clipboard")
+}
 });
 
 //initializing variables
@@ -61,13 +67,6 @@ function copyText(htmlElement){
 
     //deletes the created element
     document.body.removeChild(inputElement)
-}
-document.querySelector("#copy-text").onclick = 
-//the function below calls the copyText() function on click of the button
-function()
-{
-    copyText(document.querySelector("#quote"));
-    alert("Quote copied to clipboard")
 }
 
 
